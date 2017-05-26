@@ -2,63 +2,32 @@ package com.epam.training;
 
 public class Book {
 
-	private String authorName;
+    private String authorName;
 
-	private String authorDescription;
+    private String authorDescription;
 
-	private int yearOfPublication;
+    private int yearOfPublication;
 
-	private String title;
+    private String title;
 
-	private String description;
-	
-	public Book() {
-		super();
-	}
+    private String description;
 
-	public void setAuthor(String name, String description) {
-		this.authorName = name;
-		this.authorDescription = description;
-	}
+    Book() {
+        super();
+    }
 
-	public int getYearOfPublication() {
-		return yearOfPublication;
-	}
+    public Book(String title, String authorName, String authorDescription, int yearOfPublication, String description) {
+        this.authorName = authorName;
+        this.authorDescription = authorDescription;
+        this.yearOfPublication = yearOfPublication;
+        this.title = title;
+        this.description = description;
+    }
 
-	public void setYearOfPublication(int yearOfPublication) {
-		this.yearOfPublication = yearOfPublication;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getAuthorName() {
-		return authorName;
-	}
-
-	public String getAuthorDescription() {
-		return authorDescription;
-	}
-
-	@Override
-	public String toString() {
-		return "Book [authorName=" + authorName + ", authorDescription="
-				+ authorDescription + ", yearOfPublication="
-				+ yearOfPublication + ", title=" + title + ", description="
-				+ description + "]";
-	}
+    @Override
+    public String toString() {
+        return "Book [authorName=" + authorName + ", authorDescription=" + authorDescription + ", yearOfPublication="
+                + yearOfPublication + ", title=" + title + ", description=" + description + "]";
+    }
 
 }

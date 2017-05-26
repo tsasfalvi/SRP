@@ -1,31 +1,21 @@
 package com.epam.training;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Application {
 
-	public Application() {
-		
-	}
-	
-	public void start() {
-		List<Book> books = new ArrayList<Book>();
-		Book book = createBook();
-		books.add(book);
-		System.out.println(books);
-	}
+    public void start() {
+        Library library = new Library();
+        BookService bookService = new BookService();
 
-	private Book createBook() {
-		Book book = new Book();
-		book.setTitle("Introduction to the Theory of Programming Languages and Touch of Class");
-		book.setAuthor("Bertrand Meyer", "French academic, author, and consultant in the field of computer languages");
-		book.setDescription("This book is an excellent reference for understanding how to architect a language");
-		book.setYearOfPublication(1990);
-		return book;
-	}
-	
-	public static void main(String[] args) {
-		new Application().start();
-	}
+        Book book = bookService
+                .createBook("Introduction to the Theory of Programming Languages and Touch of Class", "Bertrand Meyer",
+                        "French academic, author, and consultant in the field of computer languages", 1990,
+                        "This book is an excellent reference for understanding how to architect a language");
+        library.add(book);
+
+        System.out.println(library.getBooks());
+    }
+
+    public static void main(String[] args) {
+        new Application().start();
+    }
 }
