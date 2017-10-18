@@ -1,4 +1,4 @@
-package com.epam.training;
+package com;
 
 public class Application {
 

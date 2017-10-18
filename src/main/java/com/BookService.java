@@ -1,4 +1,4 @@
-package com.epam.training;
+package com;
 public class BookService {
 
     public Book createBook(String title, String authorName, String authorDescription, int yesrOfPublication,
